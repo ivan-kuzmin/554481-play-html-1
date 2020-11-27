@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.3",
-    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-inline-css": "^4.0.0",
+    "gulp-remove-files": "^0.0.3",
     "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0",
     "postcss": "^8.1.10"

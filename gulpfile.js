@@ -3,7 +3,8 @@ const gulp     = require('gulp'),
   autoprefixer = require('autoprefixer'),
   inlineCss    = require('gulp-inline-css'),
   connect      = require('gulp-connect')
-  del          = require('del');
+  removeFiles  = require('gulp-remove-files')
+  htmlmin      = require('gulp-htmlmin');
 
 gulp.task('sass', function(callback) {
   return gulp.src('app/**/*.scss', { base: './app' })
@@ -11,7 +12,7 @@ gulp.task('sass', function(callback) {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('inlinecss', function() {
+gulp.task('inlineCss', function() {
   return gulp.src('app/**/*.html')
     .pipe(
       inlineCss({
@@ -24,8 +25,14 @@ gulp.task('inlinecss', function() {
         preserveMediaQueries: true,
       })
     )
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
+});
+
+gulp.task('clearCss', async function () {
+  return gulp.src('app/*/*.css')
+    .pipe(removeFiles());
 });
 
 gulp.task('connect', async function() {
@@ -41,4 +48,4 @@ gulp.task('watch', async function() {
 });
 
 gulp.task('default', gulp.series('connect', 'watch'));
-gulp.task('build', gulp.series('sass', 'inlinecss'));
+gulp.task('build', gulp.series('sass', 'inlineCss', 'clearCss'));
