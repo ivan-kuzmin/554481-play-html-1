@@ -1,7 +1,7 @@
 {
   "name": "gulp-example",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "author": "Ivan Kuzmin",
   "license": "MIT",
   "scripts": {
@@ -10,14 +10,18 @@
     "clear": "gulp clear"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.13",
+    "autoprefixer": "^10.0.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-cache": "^1.1.3",
+    "gulp-connect": "^5.7.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
     "gulp-inline-css": "^4.0.0",
-    "gulp-rename": "^2.0.0",
-    "imagemin-pngquant": "^9.0.1"
-  }
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.1.10"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie > 10"
+  ]
 }

@@ -1,0 +1,40 @@
+@import '../reset';
+
+.preheader {
+  Margin: 0;
+  color: #ffffff;
+  display: none !important;
+  font-family: arial;
+  font-size: 1px;
+  line-height: 0;
+}
+
+.wrapper {
+  background-color: #F6F6F6;
+}
+
+.content {
+  table {
+    width: 600px;
+  }
+}
+
+.break-link {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  border-spacing: 0;
+  background-color: #F6F6F6;
+
+  td {
+    Margin: 0;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #F6F6F6;
+  }
+}
+
+.header {
+  background-color: #FFFFFF;
+}
