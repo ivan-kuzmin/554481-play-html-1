@@ -8,7 +8,11 @@
     "start": "gulp build && gulp",
     "build": "NODE_ENV=production gulp build"
   },
-  "pre-commit": ["build"],
+  "husky": {
+    "hooks": {
+      "pre-commit": "build"
+    }
+  },
   "devDependencies": {
     "autoprefixer": "^10.0.3",
     "gulp": "^4.0.2",
@@ -17,9 +21,9 @@
     "gulp-inline-css": "^4.0.0",
     "gulp-remove-files": "^0.0.3",
     "gulp-sass": "^4.1.0",
+    "husky": "^4.3.6",
     "node-sass": "^5.0.0",
-    "postcss": "^8.1.10",
-    "pre-commit": "^1.2.2"
+    "postcss": "^8.1.10"
   },
   "browserslist": [
     "last 2 versions",
