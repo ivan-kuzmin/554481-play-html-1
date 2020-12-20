@@ -14,7 +14,9 @@
 }
 
 .content {
-  table {
+  width: 100%;
+
+  & > tbody > tr > td > table {
     width: 600px;
   }
 }

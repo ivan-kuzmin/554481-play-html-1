@@ -5,10 +5,10 @@
   "author": "Ivan Kuzmin",
   "license": "MIT",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build",
-    "clear": "gulp clear"
+    "start": "gulp build && gulp",
+    "build": "NODE_ENV=production gulp build"
   },
+  "pre-commit": ["build"],
   "devDependencies": {
     "autoprefixer": "^10.0.3",
     "gulp": "^4.0.2",
@@ -18,7 +18,8 @@
     "gulp-remove-files": "^0.0.3",
     "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0",
-    "postcss": "^8.1.10"
+    "postcss": "^8.1.10",
+    "pre-commit": "^1.2.2"
   },
   "browserslist": [
     "last 2 versions",
