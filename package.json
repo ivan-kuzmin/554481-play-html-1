@@ -8,11 +8,6 @@
     "start": "gulp build && gulp",
     "build": "NODE_ENV=production gulp build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn build"
-    }
-  },
   "devDependencies": {
     "autoprefixer": "^10.0.3",
     "gulp": "^4.0.2",
@@ -21,7 +16,6 @@
     "gulp-inline-css": "^4.0.0",
     "gulp-remove-files": "^0.0.3",
     "gulp-sass": "^4.1.0",
-    "husky": "^4.3.6",
     "node-sass": "^5.0.0",
     "postcss": "^8.1.10"
   },
